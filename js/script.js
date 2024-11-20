@@ -78,3 +78,27 @@ window.onclick = function(event) {
         dialog.close();
     }
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botaoMais = document.getElementById("mais");
+    const botaoMenos = document.getElementById("menos");
+    const inputContador = document.getElementById("numContador");
+
+    // Evita o comportamento padrão dos botões (recarregar a página ao clicar)
+    botaoMais.addEventListener("click", (event) => {
+        event.preventDefault();
+        alterarValor(1);
+    });
+
+    botaoMenos.addEventListener("click", (event) => {
+        event.preventDefault();
+        alterarValor(-1);
+    });
+
+    // Função para alterar o valor do input
+    function alterarValor(incremento) {
+        let valorAtual = parseInt(inputContador.value) || 0; // Converte para número (ou usa 0 se estiver vazio)
+        valorAtual += incremento; // Adiciona ou subtrai
+        inputContador.value = valorAtual; // Atualiza o input com o novo valor
+    }
+});

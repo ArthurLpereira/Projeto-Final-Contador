@@ -20,17 +20,11 @@ header {
     align-items: center;
     padding: 0 12px;
 }
-header#contagem{
+header#turma{
     background-color: #ff8200;
     font-family: "Archivo Black", sans-serif;
 }
-.txt-contagem{
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header#contagem h1{
+header#turma h1{
     color: white;
     text-transform: uppercase;
     font-size: 35px;
@@ -56,6 +50,12 @@ header#contagem h1{
 header img{
     width: 170px;
 }
+.txt-turma{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 main#index{
     height: 83vh;
     display: flex;
@@ -64,7 +64,7 @@ main#index{
     flex-direction: column;
     background-color: #ff8200;
 }
-#main-contagem{
+#main-turma{
     background-color: #f1f5f9;
     height: 65vh;
     display: flex;
@@ -152,26 +152,25 @@ a{
     font-size: 20px;
     text-transform: uppercase;
 }
-footer#footer-contagem{
+footer#footer-turma{
     width: 100%;
     height: 18vh;
     background-color: #f1f5f9;
     display: flex;
     justify-content: space-between;
 }
-footer#footer-contagem img{
-    height: 230px;
-
+footer#footer-turma img{
+    height: 200px;
 }  
-#img1-footer-contagem{
+#img1-footer-turma{
     position: relative;
-    bottom: 20px;
+    bottom: 55px;
     right: 30px;
 }
-#img2-footer-contagem{
+#img2-footer-turma{
     position: relative;
-    left: 80px;
-    bottom: 30px;
+    left: 70px;
+    bottom: 80px;
 }
 #figuras-salas {
     position: relative;
@@ -268,4 +267,71 @@ header#turma{
 .fechar i{
     font-size: 30px;
     cursor: pointer;
+}
+header#Contagem{
+    background-color: #ff8200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header#Contagem #nomeSala{
+    background-color: #f4f6f8;
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Telex", sans-serif;
+    font-size: 13px;
+    border-radius: 10px;
+}
+main#main-contagem{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form-contagem{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 40px;
+}
+#input-contagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#menos,#mais{
+    border: none;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    color: white;
+    font-size: 50px;
+}
+#menos{
+    background-color: #ee252c;
+}
+#mais{
+    background-color: #48bc50;
+}
+form button[type ='submit']{
+    background-color: #3caf47;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 50px;
+    font-size: 20px;
+}
+form button{
+    cursor: pointer;
+}
+footer#footer-contagem img{
+    width: 170px;
+    margin-left: 30px;
 }
