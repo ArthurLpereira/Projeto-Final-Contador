@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Escolha a turma</title>
+</head>
+<body>
+    <header id="contagem">
+        <img src="./img/logo-sesi.png" alt="">
+        <div class="txt-contagem">
+            <h1>contagem</h1>
+        </div>
+    </header>
+    <main id="main-contagem">
+        <section id="escolher-sala-section">
+            <div class="escolha-sala" onclick="AbrirDialog(1)"><p>1° e 2° fundamental 1a</p></div>
+            <div class="escolha-sala" onclick="AbrirDialog(2)"><p>3° e 5° fundamental 1b</p></div>
+            <div class="escolha-sala" onclick="AbrirDialog(3)"><p>6° e 9° fundamental 2</p></div>
+            <div class="escolha-sala" onclick="AbrirDialog(4)"><p>1 ao 3 ensino medio</p></div>
+            <div class="escolha-sala" onclick="AbrirDialog(5)"><p>cursos adicionais</p></div>
+        </section>
+        
+        <dialog id="dialog">
+            <div class="fechar" onclick="fecharDialog()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h2>Titulo</h2>
+            <div id="botoes-container"></div>
+        </dialog>
+    </main>
+    <footer id="footer-contagem">
+        <img src="./img/figurinha-verde-laranja.svg" alt="" id="img1-footer-contagem">
+        <img src="./img/figurinha-amarelo-roxo.svg" alt=""  id="img2-footer-contagem">
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

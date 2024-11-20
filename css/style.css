@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Telex&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 17vh;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+header#contagem{
+    background-color: #ff8200;
+    font-family: "Archivo Black", sans-serif;
+}
+.txt-contagem{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header#contagem h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.quadrado {
+    width: 95px;
+    height: 95px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box; 
+    position: absolute;
+    z-index: 1;
+    margin-left: 5px;
+}
+.logo{
+    position: relative;
+    z-index: 2;
+}
+#imgs{
+    position: absolute;
+    left: 28%;
+    bottom: 30%;
+}
+header img{
+    width: 170px;
+}
+main#index{
+    height: 83vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ff8200;
+}
+#main-contagem{
+    background-color: #f1f5f9;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.varias-imgs,.login{
+    position: relative;
+    bottom: 19%;
+}
+.varias-imgs img{
+    width: 450px;
+}
+.login {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login h1 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+}
+.login label {
+    font-family: "Archivo Black", sans-serif;
+    color: #fee600;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.login input, 
+.login button {
+    width: 80%;
+    height: 6vh;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.login button {
+    text-transform: uppercase;
+    background-color: #7ed957;
+    font-weight: bold;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#escolher-sala-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 30px;
+}
+.escolha-sala{
+    height: 25vh;
+    width: 25vw;
+    background-color: #ffdf2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.escolha-sala:nth-child(2){
+    background-color: #13b818;
+}
+.escolha-sala:nth-child(3){
+    background-color: #ff652d;
+}
+.escolha-sala:nth-child(4){
+    background-color: #ff8200;
+}
+.escolha-sala:nth-child(5){
+    background-color:#8b97fd;
+}
+
+.escolha-sala p{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+footer#footer-contagem{
+    width: 100%;
+    height: 18vh;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+}
+footer#footer-contagem img{
+    height: 230px;
+
+}  
+#img1-footer-contagem{
+    position: relative;
+    bottom: 20px;
+    right: 30px;
+}
+#img2-footer-contagem{
+    position: relative;
+    left: 80px;
+    bottom: 30px;
+}
+#figuras-salas {
+    position: relative;
+    margin: 0 auto;
+    bottom: 150px;
+    left: 470px;
+    z-index: 2;
+    width: 100%; 
+}
+
+#figuras-salas img {
+    max-width: 100%;
+    height: auto;
+    width: 550px;
+}
+header#turma{
+    background-color: #ffd700;
+    height: 25vh;
+    overflow: hidden;
+    position: relative;
+}
+.card {
+    width: 30vw;
+    min-height: 35vh;
+    padding: 20px;
+    background-color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 130px;
+    left: 530px;
+}
+.card h3 {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.btn {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+#dialog{
+    height: 350px;
+    width: 370px;
+    border: none;
+    position: relative;
+    top: calc(50% - 175px);
+    left: calc(50% - 185px);
+}
+#dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.3);}
+#dialog h2{
+    font-family: "Archivo Black", sans-serif;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#dialog #botoes-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+#dialog button{
+    font-family: "Telex", sans-serif;
+    height: 45px;
+    width: 250px;
+    font-size: 25px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    border: none;
+}
+.fechar{
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left:87%;
+    top: 10px;
+}
+.fechar i{
+    font-size: 30px;
+    cursor: pointer;
+}
