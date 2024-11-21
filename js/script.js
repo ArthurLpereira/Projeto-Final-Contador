@@ -100,5 +100,16 @@ document.addEventListener("DOMContentLoaded", () => {
         let valorAtual = parseInt(inputContador.value) || 0; // Converte para número (ou usa 0 se estiver vazio)
         valorAtual += incremento; // Adiciona ou subtrai
         inputContador.value = valorAtual; // Atualiza o input com o novo valor
+
+        if(valorAtual < 0) valorAtual = 0;
+        if(valorAtual > 33) valorAtual = 33;
+
+        inputContador.value = valorAtual;
     }
+
+    inputContador.addEventListener("input", () =>{
+        if(this.value < 0) this.value = 0;
+        if(this.value > 33) this.value = 33;
+    })
 });
+
