@@ -30,6 +30,32 @@ header#turma h1{
     text-transform: uppercase;
     font-size: 35px;
 }
+header#turma{
+    background-color: #ffd700;
+    height: 25vh;
+    overflow: hidden;
+    position: relative;
+}
+header#Contagem{
+    background-color: #ff8200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header#Contagem #nomeSala{
+    background-color: #f4f6f8;
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Telex", sans-serif;
+    font-size: 13px;
+    border-radius: 10px;
+}
+header img{
+    width: 170px;
+}
 .quadrado {
     width: 95px;
     height: 95px;
@@ -48,9 +74,7 @@ header#turma h1{
     left: 28%;
     bottom: 30%;
 }
-header img{
-    width: 170px;
-}
+
 .txt-turma{
     width: 75%;
     display: flex;
@@ -68,6 +92,12 @@ main#index{
 #main-turma{
     background-color: #f1f5f9;
     height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main#main-contagem{
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,6 +147,8 @@ main#index{
 a{
     text-decoration: none;
     color: white;
+    position: relative;
+    bottom: 10px; /* GAMBIARRA PARA A APROVAÇÃO TEM QUE MUDAR DEPOIS QUE CONFIMAR QUE VAI SER ASSIM */
 }
 #escolher-sala-section{
     display: flex;
@@ -153,26 +185,7 @@ a{
     font-size: 20px;
     text-transform: uppercase;
 }
-footer#footer-turma{
-    width: 100%;
-    height: 18vh;
-    background-color: #f1f5f9;
-    display: flex;
-    justify-content: space-between;
-}
-footer#footer-turma img{
-    height: 200px;
-}  
-#img1-footer-turma{
-    position: relative;
-    bottom: 55px;
-    right: 30px;
-}
-#img2-footer-turma{
-    position: relative;
-    left: 70px;
-    bottom: 80px;
-}
+
 #figuras-salas {
     position: relative;
     margin: 0 auto;
@@ -187,12 +200,7 @@ footer#footer-turma img{
     height: auto;
     width: 550px;
 }
-header#turma{
-    background-color: #ffd700;
-    height: 25vh;
-    overflow: hidden;
-    position: relative;
-}
+
 .card {
     width: 30vw;
     min-height: 35vh;
@@ -269,29 +277,8 @@ header#turma{
     font-size: 30px;
     cursor: pointer;
 }
-header#Contagem{
-    background-color: #ff8200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header#Contagem #nomeSala{
-    background-color: #f4f6f8;
-    padding: 10px;
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Telex", sans-serif;
-    font-size: 13px;
-    border-radius: 10px;
-}
-main#main-contagem{
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
 #form-contagem{
     display: flex;
     align-items: center;
@@ -342,13 +329,33 @@ form button[type ='submit']{
 form button{
     cursor: pointer;
 }
-footer#footer-contagem img{
-    width: 170px;
-    margin-left: 30px;
-}
 #LabelNumContador{
     font-family: "Telex", sans-serif;
     font-weight: bold;
     color: #ff4d0d;
     font-size: 20px;
+}
+footer#footer-turma{
+    width: 100%;
+    height: 18vh;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+}
+footer#footer-turma img{
+    height: 200px;
+}  
+#img1-footer-turma{
+    position: relative;
+    bottom: 55px;
+    right: 30px;
+}
+#img2-footer-turma{
+    position: relative;
+    left: 70px;
+    bottom: 80px;
+}
+footer#footer-contagem img{
+    width: 170px;
+    margin-left: 30px;
 }
