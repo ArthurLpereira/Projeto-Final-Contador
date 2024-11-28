@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+    <style>
+        .container { font-family: Arial, sans-serif; padding: 20px; }
+        .titulo { font-weight: bold; margin-top: 20px; }
+        .item { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .foto { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <div id="conteudo" class="container"></div>
+
+    <script>
+        const API_URL = "http://10.188.35.87:8000/users/usuarios";
+
+        async function carregarDados() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`Erro: ${response.statusText}`);
+                }
+                const dados = await response.json();
+                renderizarUsuarios(dados.usuarios);
+            } catch (erro) {
+                console.error("Erro ao carregar dados:", erro.message);
+                document.getElementById("conteudo").innerHTML = "<p>Erro ao carregar dados.</p>";
+            }
+        }
+
+        function renderizarUsuarios(usuarios) {
+            const conteudo = document.getElementById("conteudo");
+            conteudo.innerHTML = `
+                <div class="titulo">Usuários:</div>
+                <ul>
+                    ${usuarios.map(usuario => `
+                        <li class="item">
+                            <img class="foto" src="${usuario.foto}" alt="Foto do ${usuario.nome}" />
+                            <div><strong>Nome:</strong> ${usuario.nome}</div>
+                            <div><strong>Email:</strong> ${usuario.email}</div>
+                            <div><strong>NIF:</strong> ${usuario.nif}</div>
+                        </li>
+                    `).join("")}
+                </ul>
+            `;
+        }
+
+        // Chamar a função ao carregar a página
+        carregarDados();
+    </script>
+</body>
+</html>

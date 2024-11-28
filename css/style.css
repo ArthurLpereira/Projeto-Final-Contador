@@ -25,7 +25,7 @@ header#turma{
     background-color: #ff8200;
     font-family: "Archivo Black", sans-serif;
 }
-header#turma h1{
+header#turma h1,header#cadastro h1{
     color: white;
     text-transform: uppercase;
     font-size: 35px;
@@ -42,6 +42,12 @@ header#Contagem{
     align-items: center;
     justify-content: center;
 }
+header#cadastro{
+    background-color: #ff8200;
+    font-family: "Archivo Black", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
 header#Contagem #nomeSala{
     background-color: #f4f6f8;
     padding: 10px;
@@ -55,6 +61,12 @@ header#Contagem #nomeSala{
 }
 header img{
     width: 170px;
+}
+header#cadastro img#fig{
+    width: 300px;
+    position: relative;   
+    left: 50px;
+    top: 20px;
 }
 .quadrado {
     width: 95px;
@@ -138,7 +150,7 @@ main#main-contagem{
     margin-bottom: 20px;
     font-size: 20px;
 }
-.login form button[type = 'submit'] {
+.login form#login button[type = 'submit'] {
     text-transform: uppercase;
     background-color: #7ed957;
     font-weight: bold;
@@ -334,6 +346,20 @@ form button{
     font-weight: bold;
     color: #ff4d0d;
     font-size: 20px;
+}
+main#main-cadastro section{
+    background-color: #ffdf2b;
+    width: 30%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+main#main-cadastro section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 footer#footer-turma{
     width: 100%;
