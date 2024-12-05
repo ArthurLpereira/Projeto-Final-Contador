@@ -1,3 +1,4 @@
+
 // Função para abrir o diálogo com base na sala escolhida
 function AbrirDialog(escolhaSalaID) {
     const DadosDialog = {
@@ -5,7 +6,7 @@ function AbrirDialog(escolhaSalaID) {
         2: { titulo: "FUNDAMENTAL 1B", botoes: ["3° Ano", "4° Ano", "5° Ano"], backgroundColor: "#13b818" },
         3: { titulo: "FUNDAMENTAL 2", botoes: ["6° Ano", "7° Ano", "8° Ano", "9° Ano"], backgroundColor: "#ff652d" },
         4: { titulo: "ENSINO MÉDIO", botoes: ["1° Ano", "2° Ano", "3° Ano"], backgroundColor: "#ff8200" },
-        5: { titulo: "CURSOS", botoes: ["Arduino", "Robótica", "Personaliza","Senai", "Caça Asteroide", "Autorizados","Para Gabaritar", "TRI","Topicos Avançados","Práticas Investigativas"], backgroundColor: "#8b97fd" }
+        5: { titulo: "CURSOS", botoes: ["Arduino", "Robótica", "Personaliza","SENAI", "Caça Asteroide", "Autorizados","Para Gabaritar", "TRI","Topicos Avançados","Práticas Investigativas"], backgroundColor: "#8b97fd" }
     };
 
     const { titulo, botoes, backgroundColor } = DadosDialog[escolhaSalaID];
@@ -92,5 +93,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const BTNLogin = document.getElementById(SubLogin);
+console.log('Script foi carregado')
+const btn_enviar_contagem = document.getElementById('enviar_form');
+btn_enviar_contagem.addEventListener('click', () => {
+    console.log('Evento acionado');
+    window.location.href = "./grupamento_turma.html";
+
+    alert('Contagem cadastrada com sucesso');
+
+});
+const btn_login = document.getElementById('fazer_login');
+btn_login.addEventListener('click', () => {
+    console.log('Evento acionado');
+    window.location.href = "./grupamento_turma.html";
+
+    alert('Login realizado com sucesso');
+
+});
+// console.log('antes do form')
+// document.getElementById('form_cadastro').addEventListener('submit',(event)=>{
+//     event.preventDefault();
+//     console.log('Enviado')
+//     const cads_nome = document.getElementById('txtnome').value
+//     const cads_nif = document.getElementById('txtnif').value
+//     const cads_senha = document.getElementById('txtsenha').value
+
+//     const url_cadastro = "http://10.188.35.87:8000/users/usuarios"
+
+//     const dadosCadastro = {
+//         nome:cads_nome,
+//         nif:cads_nif,
+//         senha:cads_senha
+//     };
+
+//     fetch(url_cadastro,{
+//         method: "POST",
+//         headers:{
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(dadosCadastro)
+//     })
+//     .then(response =>{
+//         if(!response.ok){
+//             throw new Error(`Erro na requisição ${response.status}`);
+//         }
+//         return response.json();
+//     })
+//     .then(data=>{
+//         alert("Cadastro realizado com sucesso!")
+//         console.log("Resposta da API:", data);
+//     })
+//     .catch(error =>{
+//         alert("Não foi possível realizar o cadastro")
+//         console.log('erro:', error);
+//     })
+// })
 

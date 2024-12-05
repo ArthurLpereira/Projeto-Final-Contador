@@ -157,11 +157,11 @@ main#main-contagem{
     font-weight: bold;
     cursor: pointer;
 }
-a{
+main#index .login form#loginn a{
     text-decoration: none;
     color: white;
     position: relative;
-    bottom: 10px;
+    bottom: 9px;
 }
 #escolher-sala-section{
     display: flex;
@@ -276,6 +276,11 @@ a{
     background-color: #f1f5f9;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#dialog button:hover{
+    transform: scale(1.1);
 }
 .fechar{
     background: none;
@@ -441,6 +446,20 @@ main#main-cadastro section form input::placeholder{
     border: none;
     font-size: 20px;
     font-weight: bold;
+}
+#main-cadastro section form input{
+    font-size: 25px;
+    text-align: center;
+}
+main#main-contagem section form a{
+    color: white;
+    text-decoration: none;
+}
+#dialog button:focus {
+    outline: none;
+}
+dialog::-webkit-scrollbar-track {
+    background-color: #611818; /* Cor do fundo da barra de rolagem */
 }
 /* @media screen and (max-width:1366px){
     main{
