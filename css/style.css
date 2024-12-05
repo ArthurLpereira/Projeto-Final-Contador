@@ -10,9 +10,11 @@
 html, body {
     height: 100%;
     width: 100%;
+    /* overflow: hidden; */
+}
+#body_cadastro,#body_salas{
     overflow: hidden;
 }
-
 header {
     width: 100%;
     height: 17vh;
@@ -42,12 +44,7 @@ header#Contagem{
     align-items: center;
     justify-content: center;
 }
-header#cadastro{
-    background-color: #ff8200;
-    font-family: "Archivo Black", sans-serif;
-    display: flex;
-    justify-content: space-between;
-}
+
 header#Contagem #nomeSala{
     background-color: #f4f6f8;
     padding: 10px;
@@ -61,12 +58,6 @@ header#Contagem #nomeSala{
 }
 header img{
     width: 170px;
-}
-header#cadastro img#fig{
-    width: 300px;
-    position: relative;   
-    left: 50px;
-    top: 20px;
 }
 .quadrado {
     width: 95px;
@@ -101,6 +92,11 @@ main#index{
     flex-direction: column;
     background-color: #ff8200;
 }
+main#index section div#link a{
+    font-family: "Telex", sans-serif;
+    text-decoration: underline;
+    color: rgb(23, 134, 213);
+}
 #main-turma{
     background-color: #f1f5f9;
     height: 65vh;
@@ -126,7 +122,12 @@ main#main-contagem{
     max-width: 400px;
     text-align: center;
 }
-
+#loginn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .login h1 {
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -150,7 +151,7 @@ main#main-contagem{
     margin-bottom: 20px;
     font-size: 20px;
 }
-.login form#login button[type = 'submit'] {
+.login form#login button[type = 'submit']{
     text-transform: uppercase;
     background-color: #7ed957;
     font-weight: bold;
@@ -160,7 +161,7 @@ a{
     text-decoration: none;
     color: white;
     position: relative;
-    bottom: 10px; /* GAMBIARRA PARA A APROVAÇÃO TEM QUE MUDAR DEPOIS QUE CONFIMAR QUE VAI SER ASSIM */
+    bottom: 10px;
 }
 #escolher-sala-section{
     display: flex;
@@ -328,7 +329,7 @@ form #input-contagem input[type = 'number']{
 #mais{
     background-color: #48bc50;
 }
-form button[type ='submit']{
+main#index form button[type ='submit'],#enviar_form{
     background-color: #3caf47;
     text-transform: uppercase;
     border: none;
@@ -346,20 +347,6 @@ form button{
     font-weight: bold;
     color: #ff4d0d;
     font-size: 20px;
-}
-main#main-cadastro section{
-    background-color: #ffdf2b;
-    width: 30%;
-    height: 50vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-main#main-cadastro section form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 footer#footer-turma{
     width: 100%;
@@ -384,4 +371,155 @@ footer#footer-turma img{
 footer#footer-contagem img{
     width: 170px;
     margin-left: 30px;
+}
+header#cadastro{
+    background-color: #ff8200;
+    font-family: "Archivo Black", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header#cadastro div#tituloh1{
+    margin-left: 100px;
+}
+header#cadastro img#fig{
+    width: 300px;
+    position: relative;   
+    left: 50px;
+    top: 20px;
+}
+main#main-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+}
+main#main-cadastro section{
+    background-color: #ffdf2b;
+    width: 28%;
+    height: 55vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main#main-cadastro section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+main#main-cadastro section form div{
+    display: flex;
+    font-family: "Telex", sans-serif;
+    color: rgb(69, 69, 69);
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+main#main-cadastro section form input{
+    width:20vw;
+    height: 7vh;
+    border-radius: 10px;
+    border: none;
+}
+main#main-cadastro section form input::placeholder{
+    color: rgb(69, 69, 69);
+    text-align: center;
+    font-family: "Telex", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+#btn-cadastrar{
+    width: 97%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #18b41a;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* @media screen and (max-width:1366px){
+    main{
+        background-color: red;
+    }
+} */
+@media screen and (max-width:1024px){
+    header img{
+        width: 130px;
+        height: auto;
+    }
+    .varias-imgs img{
+        width: 300px;
+        height: auto;
+        position: relative;
+        top: 15px;
+    }
+    .login h1{
+        font-size: 35px;
+    }
+    #link a{
+        font-size: 20px;
+    }
+    header#cadastro h1{
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header#cadastro img{
+        display: none;
+    }
+    header#cadastro div#tituloh1{
+        margin-left: 80px;
+    }
+    header#cadastro img#fig{
+        display: none;
+    }
+    main#main-cadastro section{
+        width: 90%;
+    }
+    main#main-cadastro section form input{
+        width:70vw;
+        height: 7vh;
+        border-radius: 10px;
+        border: none;
+    }
+    header#turma{
+        height: 20vh;
+        font-size: 28px;
+    }
+    #escolher-sala-section{
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        margin-top: 500px;
+    }
+    .escolha-sala{
+        width: 90%;
+    }
+    #footer-turma img{
+        display: none;
+    }
+    #body_salas{
+        overflow: visible;
+    }
+    header#Contagem #nomeSala{
+        width: 70vw;
+    }
+    #menos,#mais{
+        height: 80px;
+        width: 80px;
+    }
+    div#input-contagem{
+        gap: 40px;
+    }
+    footer#footer-contagem img{
+        width: 140px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
 }

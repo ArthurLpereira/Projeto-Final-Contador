@@ -5,7 +5,7 @@ function AbrirDialog(escolhaSalaID) {
         2: { titulo: "FUNDAMENTAL 1B", botoes: ["3° Ano", "4° Ano", "5° Ano"], backgroundColor: "#13b818" },
         3: { titulo: "FUNDAMENTAL 2", botoes: ["6° Ano", "7° Ano", "8° Ano", "9° Ano"], backgroundColor: "#ff652d" },
         4: { titulo: "ENSINO MÉDIO", botoes: ["1° Ano", "2° Ano", "3° Ano"], backgroundColor: "#ff8200" },
-        5: { titulo: "CURSOS", botoes: ["Arduino", "Robótica", "Personaliza"], backgroundColor: "#8b97fd" }
+        5: { titulo: "CURSOS", botoes: ["Arduino", "Robótica", "Personaliza","Senai", "Caça Asteroide", "Autorizados","Para Gabaritar", "TRI","Topicos Avançados","Práticas Investigativas"], backgroundColor: "#8b97fd" }
     };
 
     const { titulo, botoes, backgroundColor } = DadosDialog[escolhaSalaID];
@@ -27,6 +27,9 @@ function AbrirDialog(escolhaSalaID) {
         });
 
         container.appendChild(button);
+        if (botao === "Práticas Investigativas") {
+            button.style.fontSize = "22px"; // Define um tamanho de fonte menor
+        }
     });
 
     // Atualiza o fundo do diálogo
